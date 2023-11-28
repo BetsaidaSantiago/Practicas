@@ -1,0 +1,12 @@
+def es_correo_electronico(cadena):
+    if "@" in cadena:
+        dominio = cadena.split("@")[1]
+        if dominio.endswith(".com") or dominio.endswith(".com.mx") or dominio.endswith(".mx"):
+            return True
+    return False
+
+cadena = input("Ingrese una cadena de texto: ")
+if es_correo_electronico(cadena):
+    print("La cadena ingresada es un correo electrónico válido.")
+else:
+    print("La cadena ingresada no es un correo electrónico válido.")
